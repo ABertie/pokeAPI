@@ -1,10 +1,11 @@
 const URL = new URLSearchParams(window.location.search)
 
 const SCREEN = document.querySelector(".pokemonScreen")
+const SHINY = document.querySelector(".buttonShiny")
 
 SCREEN.innerHTML = `
     <h2 class="pokmonName">* *</h2>
-    <img class="pokeImg" src="/img/pokeDexScreen.jpg" alt="pokedex">
+    <img class="pokeImg" src="" alt="screen">
     <div class="disc"></div>
     <h2 class="pokeID"><i class="fa-solid fa-bars"></i></h2>`
 
@@ -34,9 +35,16 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
         `
 
         SCREEN.innerHTML = `
-        <h2 class="pokmonName">${data.species.name}</h2>
-        <img class="pokeImg" src="${data.sprites.other.dream_world.front_default}" alt="${data.species.name}">
+        <h2 class="pokmonName">${data.name}</h2>
+        <img class="pokeImg" src="${data.sprites.other["official-artwork"].front_default || "" }">
         <div class="disc"></div>
         <h2 class="pokeID">#${data.id}</h2>
         `
+
+        SHINY.addEventListener("click", function() {
+            const IMG = SCREEN.querySelector(".pokeImg")
+            if (IMG.src.includes("shiny")) IMG.src = data.sprites.other["official-artwork"].front_default || ""
+            else IMG.src = data.sprites.other["official-artwork"].front_shiny || ""
+        })
+        // data.name !== data.species.name ? data.sprites.other["official-artwork"].front_shiny : 
     })
