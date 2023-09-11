@@ -1,0 +1,10 @@
+<svg version="1.1" height="100" width="200" xmlns="http://www.w3.org/2000/svg">
+    <path d="M200 50 L140 50 C125 50 105 93 90 93 L5 93 Q-1 93 -1 99" stroke="#b42225" stroke-width="2" fill="none"/>
+
+    <line x1="140" y1="55" x2="162" y2="55" stroke="#b42225" stroke-width="1.5"/>
+    <line x1="140" y1="58" x2="162" y2="58" stroke="#b42225" stroke-width="1.5"/>
+    <line x1="140" y1="61" x2="162" y2="61" stroke="#b42225" stroke-width="1.5"/>
+    <line x1="140" y1="64" x2="162" y2="64" stroke="#b42225" stroke-width="1.5"/>
+    <line x1="140" y1="67" x2="162" y2="67" stroke="#b42225" stroke-width="1.5"/>
+    <line x1="140" y1="70" x2="162" y2="70" stroke="#b42225" stroke-width="1.5"/>
+</svg>
