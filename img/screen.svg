@@ -1,0 +1,7 @@
+<svg version="1.1" height="100" width="150" xmlns="http://www.w3.org/2000/svg">
+
+    <path d="M20 100 L80 0 L90 0 L30 100" fill="#fef8f822"/>
+    <path d="M40 100 L100 0 L140 0 L80 100" fill="#fef8f833"/>
+    <path d="M90 100 L150 0 L160 0 L100 100" fill="#fef8f822"/>
+
+</svg>

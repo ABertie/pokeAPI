@@ -39,10 +39,19 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
         </div>
         `
 
+        const IMG = new Image()
+        IMG.src = data.sprites.other["official-artwork"].front_default
+        IMG.classList = "pokeImg"
+        IMG.alt = data.name
+
+        IMG.onload = function () {
+            SCREEN.querySelector(".pokeImg").append(IMG)
+        }
 
         SCREEN.innerHTML = `
         <h2 class="pokmonName">${data.name}</h2>
-        <img class="pokeImg" src="${data.sprites.other["official-artwork"].front_default || "" }">
+        <!-- <img class="pokeImg" src="${data.sprites.other["official-artwork"].front_default || "" }" alt="${data.name}"> -->
+        <span class="pokeImg" src="" alt="${data.name}" style="padding:0;"></span>
         <div class="disc"></div>
         <h2 class="pokeID">#${data.id}</h2>
         `
@@ -52,5 +61,4 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
             if (IMG.src.includes("shiny")) IMG.src = data.sprites.other["official-artwork"].front_default || ""
             else IMG.src = data.sprites.other["official-artwork"].front_shiny || ""
         })
-        // data.name !== data.species.name ? data.sprites.other["official-artwork"].front_shiny : 
     })

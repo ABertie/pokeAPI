@@ -1,3 +1,6 @@
 <svg version="1.1" height="300" width="200" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 1 L61 1 C75 1 105 43 120 43 L194 43 Q199 43 199 49 L199 295 Q199 300 194 300 L0 300  Z" stroke="#b42225" stroke-width="1.5" fill="#db3c36"/>
+    <path d="M0 3 L61 3 C75 3 105 45 120 45 L194 45 Q198 45 197 47.6" stroke="#b4222533" stroke-width="4" fill="none"/>
+
+    <line x1="14" y1="5" x2="14" y2="300" stroke="#b4222533" stroke-width="9"/>
 </svg>

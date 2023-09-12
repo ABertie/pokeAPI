@@ -1,5 +1,12 @@
 <svg version="1.1" height="100" width="200" xmlns="http://www.w3.org/2000/svg">
-    <path d="M200 50 L140 50 C125 50 105 93 90 93 L5 93 Q-1 93 -1 99" stroke="#b42225" stroke-width="2" fill="none"/>
+    <path d="M10 91 L60 2 L70 2 L20 91" fill="#fef8f811"/>
+    <path d="M30 91 L80 2 L120 2 L70 91" fill="#fef8f811"/>
+    <path d="M80 91 L130 2 L140 2 L90 91" fill="#fef8f811"/>
+
+    <path d="M2 30 L2 5 Q2 2 5 2 L100 2" stroke="#fef8f811" stroke-width="1" fill="none"/>
+
+    <path d="M-1 -1 L201 -1 L201 50 L140 50 C125 50 105 93 90 93 L5 93 Q-1 93 -1 99 Z" stroke="#b42225" stroke-width="2" fill="none"/>
+    <path d="M201 51.3 L140 51.3 C125 51.3 105 94.3 90 94.3 L5 94.3 Q0 94.3 -5 100" stroke="#b4222533" stroke-width="6.5" fill="none"/>
 
     <line x1="140" y1="55" x2="162" y2="55" stroke="#b42225" stroke-width="1.5"/>
     <line x1="140" y1="58" x2="162" y2="58" stroke="#b42225" stroke-width="1.5"/>
