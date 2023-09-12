@@ -3,6 +3,8 @@ const OFFSET = parseInt(URL.get("offset") || 0)
 const NEXT_PAGE = document.querySelector(".nextPage")
 const PREVIOUS_PAGE = document.querySelector(".previousPage")
 
+const SPINNER = document.querySelector(".spinner")
+
 // if (OFFSET === 0 ) {PREVIOUS_PAGE.href = `?offset=${OFFSET + 1280}`}
 // else PREVIOUS_PAGE.href = `?offset=${OFFSET - 10}`
 // if (OFFSET === 1280) NEXT_PAGE.href = `?offset=${OFFSET - 1280}`
@@ -18,7 +20,9 @@ fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${OFFSET}`)
     })
     .then(function(data) {
         console.log(data);
-        
+
+        SPINNER.style.display = "none"
+
         const UL = document.querySelector(".searchResult")
 
         const LAST_OFFSET = data.count - (data.count % 10)

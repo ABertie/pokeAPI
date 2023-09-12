@@ -3,6 +3,8 @@ const URL = new URLSearchParams(window.location.search)
 const SCREEN = document.querySelector(".pokemonScreen")
 const SHINY = document.querySelector(".buttonShiny")
 
+const SPINNER = document.querySelector(".spinner")
+
 SCREEN.innerHTML = `
     <h2 class="pokmonName">* *</h2>
     <img class="pokeImg" src="" alt="screen">
@@ -19,6 +21,9 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
     })
     .then(function(data) {
         console.log(data);
+        
+        SPINNER.style.display = "none"
+        
         const DIV = document.querySelector(".pokemon")
 
         DIV.innerHTML = `
@@ -33,6 +38,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
             <p>Gns. weight: ${data.weight / 10} kg</p>
         </div>
         `
+
 
         SCREEN.innerHTML = `
         <h2 class="pokmonName">${data.name}</h2>
