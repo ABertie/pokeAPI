@@ -13,11 +13,9 @@ SCREEN.innerHTML = `
 
 fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
     .then(function(response) {
-        if (response.status === 200) {
-            return response.json()
-        } else {
-            document.body.innerText="Ups, noget gik galt. Prøv igen senere"
-        }
+        if (response.status !== 200) 
+            throw new Error("fejlbesked")
+        return response.json()
     })
     .then(function(data) {
         console.log(data);
@@ -50,15 +48,18 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
 
         SCREEN.innerHTML = `
         <h2 class="pokmonName">${data.name}</h2>
-        <!-- <img class="pokeImg" src="${data.sprites.other["official-artwork"].front_default || "" }" alt="${data.name}"> -->
         <span class="pokeImg" src="" alt="${data.name}" style="padding:0;"></span>
         <div class="disc"></div>
         <h2 class="pokeID">#${data.id}</h2>
         `
+        // <img class="pokeImg" src="${data.sprites.other["official-artwork"].front_default || "" }" alt="${data.name}">
 
         SHINY.addEventListener("click", function() {
             const IMG = SCREEN.querySelector(".pokeImg")
             if (IMG.src.includes("shiny")) IMG.src = data.sprites.other["official-artwork"].front_default || ""
             else IMG.src = data.sprites.other["official-artwork"].front_shiny || ""
         })
+    })
+    .catch(function (error) {
+        window.location.href="/couldNotFind.html"
     })

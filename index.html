@@ -35,12 +35,17 @@
         <div class="leftSide pokedex">
             <div class="spinner"></div>
             <form class="searchForm">
-                <input type="search" class="search" placeholder="Søg på en pokemon">
+                <select>
+                    <option>pokemon</option>
+                    <option>type</option>
+                </select>
+                <input type="search" name="name" class="search" placeholder="Søg på en pokemon" list="searchObtions">
+                <datalist id="searchObtions"></datalist>
             </form>
             <ul class="searchResult"></ul>
             <div class="flipPage">
                 <a class="previousPage" href=""><i class="fa-solid fa-chevron-left"></i></a>
-                <a class="nextPage" href=""><i class="fa-solid fa-chevron-right"></i></i></a>
+                <a class="nextPage" href=""><i class="fa-solid fa-chevron-right"></i></a>
             </div>
         </div>
     </main>
