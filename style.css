@@ -357,6 +357,12 @@ button{
     text-align: center;
 }
 
+.notFindMessage{
+    position: absolute;
+    top: 60%;
+    left: 12%;
+}
+
 .midSide{
     grid-area: 2/2/5/4;
     
