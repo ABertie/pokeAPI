@@ -55,7 +55,6 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
         // <img class="pokeImg" src="${data.sprites.other["official-artwork"].front_default || "" }" alt="${data.name}">
 
         SHINY.addEventListener("click", function() {
-            const IMG = SCREEN.querySelector(".pokeImg")
             if (IMG.src.includes("shiny")) IMG.src = data.sprites.other["official-artwork"].front_default || ""
             else IMG.src = data.sprites.other["official-artwork"].front_shiny || ""
         })
