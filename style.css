@@ -304,28 +304,6 @@ main {
     position: relative;
 }
 
-.indexPage{
-    color: var(--light-color);
-    font-size: 1.5rem;
-    
-    position: absolute;
-    bottom: 9rem; 
-    left: 2rem;
-}
-
-.indexPage i{
-    display: inline-block;
-    
-    width: 2.25rem;
-    padding: .25rem 0;
-    box-shadow: var(--shadow-small);
-    background-color: var(--darkest-color);
-    border: 2px solid var(--light-color);
-    border-radius: 50%;
-
-    text-align: center;
-}
-
 button{
     border: none;
     background: none;
@@ -355,6 +333,24 @@ button{
     background-clip: text;
     color: transparent;
     text-align: center;
+}
+
+.buttonShiny::before{
+    content: "";
+
+    width: 2rem;
+    height: 2rem;
+    box-shadow: var(--shadow-small);
+    background-color: var(--darkest-color);
+    border: 2px solid var(--light-color);
+    border-radius: 50%;
+
+    color: var(--light-color);
+    font-size: 1.5rem;
+    
+    position: absolute;
+    bottom: 3.25rem; 
+    left: 0;
 }
 
 .notFindMessage{
@@ -529,7 +525,7 @@ li {
     box-shadow: var(--shadow-big);
 }
 
-.searchResult a {
+.searchResult a{
     --background: var(--brand-color);
     --color: var(--lightest-color);
     
